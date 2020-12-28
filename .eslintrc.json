@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "sort-keys-fix"
+  ],
+  "extends": ["@ehacke/eslint-config"],
+  "rules": {
+    "sort-keys-fix/sort-keys-fix": "error"
+  }
+}

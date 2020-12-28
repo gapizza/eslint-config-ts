@@ -1,0 +1,77 @@
+{
+  "name": "@ehacke/eslint-config-ts",
+  "description": "Eslint Config for Typescript projects",
+  "version": "1.1.0",
+  "author": "Eric Hacke",
+  "bugs": {
+    "url": "https://github.com/ehacke/eslint-config-ts/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@ehacke/commitlint-config": "^2.0.0",
+    "@ehacke/eslint-config": "^2.0.1",
+    "@ehacke/prettier-config": "^1.0.3",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/bluebird": "^3.5.33",
+    "@types/node": "^14.14.16",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "@typescript-eslint/parser": "^4.11.0",
+    "commitizen": "^4.2.2",
+    "commitlint": "^11.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.16.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-jsdoc": "^30.7.9",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "fixpack": "^3.0.6",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "files": [
+    "*.js",
+    "!scratch.*"
+  ],
+  "homepage": "https://github.com/ehacke/eslint-config-ts#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "prettier *.js --write"
+    }
+  },
+  "keywords": [
+    "config",
+    "eslint",
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "@ehacke/eslint-config": "^2.0.0",
+    "@ehacke/prettier-config": "^1.0.1",
+    "eslint": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehacke/eslint-config-ts.git"
+  },
+  "scripts": {
+    "beta": "npm version prerelease && npm publish",
+    "commit": "git-cz",
+    "lint": "fixpack && prettier-eslint --write && eslint --fix \"**/*.{js,ts}\"",
+    "major": "npm version major && npm publish",
+    "minor": "npm version minor && npm publish",
+    "patch": "npm version patch && npm publish",
+    "postpublish": "git push",
+    "prepare": "fixpack",
+    "preversion": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
