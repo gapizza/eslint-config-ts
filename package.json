@@ -11,6 +11,9 @@
       "path": "cz-conventional-changelog"
     }
   },
+  "dependencies": {
+    "@rushstack/eslint-patch": "^1.0.6"
+  },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
@@ -48,7 +51,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^2.0.0",
+    "@gapizza/eslint-config": "^1.0.0",
     "@gapizza/prettier-config": "^1.0.1",
     "eslint": "^7.0.0"
   },

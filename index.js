@@ -1,5 +1,7 @@
+require("@rushstack/eslint-patch/modern-module-resolution");
+
 module.exports = {
-  extends: ['plugin:@typescript-eslint/recommended', '@ehacke/eslint-config', 'plugin:import/typescript'],
+  extends: ['plugin:@typescript-eslint/recommended', '@gapizza/eslint-config', 'plugin:import/typescript'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'import', 'simple-import-sort'],
   rules: {
