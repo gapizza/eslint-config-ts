@@ -2,7 +2,7 @@
   "plugins": [
     "sort-keys-fix"
   ],
-  "extends": ["@ehacke/eslint-config"],
+  "extends": ["@gapizza/eslint-config"],
   "rules": {
     "sort-keys-fix/sort-keys-fix": "error"
   }
