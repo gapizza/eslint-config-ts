@@ -31,7 +31,7 @@
   },
   "engineStrict": true,
   "engines": {
-    "npm": "~7.0.0"
+    "npm": ">=7.0.0"
   },
   "files": [
     "*.js",
@@ -46,7 +46,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^1.2.1-1",
+    "@gapizza/eslint-config": "^1.2.1-2",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint-import-resolver-typescript": "^2.4.0"
