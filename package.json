@@ -19,8 +19,6 @@
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/bluebird": "^3.5.34",
     "@types/node": "^15.0.2",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "@typescript-eslint/parser": "^4.22.1",
     "commitizen": "^4.2.3",
     "commitlint": "^12.1.1",
     "cz-conventional-changelog": "^3.3.0",
@@ -30,6 +28,10 @@
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "prettier-eslint-cli": "^5.0.1"
+  },
+  "engineStrict": true,
+  "engines": {
+    "npm": "~7.0.0"
   },
   "files": [
     "*.js",
@@ -44,7 +46,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^1.2.1-0",
+    "@gapizza/eslint-config": "^1.2.1-1",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint-import-resolver-typescript": "^2.4.0"
