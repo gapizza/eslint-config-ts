@@ -19,13 +19,13 @@
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/bluebird": "^3.5.34",
     "@types/node": "^15.0.2",
-    "commitizen": "^4.2.3",
+    "commitizen": "^4.2.4",
     "commitlint": "^12.1.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.25.0",
+    "eslint": "^7.26.0",
     "fixpack": "^4.0.0",
     "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.2.1",
     "prettier-eslint-cli": "^5.0.1"
   },
@@ -46,7 +46,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^1.3.0",
+    "@gapizza/eslint-config": "^1.3.1",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint-import-resolver-typescript": "^2.4.0"
@@ -56,7 +56,7 @@
     "url": "git+https://github.com/gapizza/eslint-config-ts.git"
   },
   "scripts": {
-    "beta": "npm version prerelease && npm publish",
+    "beta": "npm version prerelease && npm publish --tag beta",
     "commit": "git-cz",
     "lint": "fixpack && prettier-eslint --write && eslint --fix \"**/*.{js,ts}\"",
     "major": "npm version major && npm publish",
