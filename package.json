@@ -12,21 +12,21 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@gapizza/commitlint-config": "^1.0.1",
     "@gapizza/prettier-config": "^1.0.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@types/bluebird": "^3.5.34",
-    "@types/node": "^15.0.2",
+    "@types/bluebird": "^3.5.35",
+    "@types/node": "^15.12.4",
     "commitizen": "^4.2.4",
-    "commitlint": "^12.1.1",
+    "commitlint": "^12.1.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.26.0",
+    "eslint": "^7.29.0",
     "fixpack": "^4.0.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0",
+    "prettier": "^2.3.1",
     "prettier-eslint-cli": "^5.0.1"
   },
   "engineStrict": true,
@@ -46,9 +46,9 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^1.6.0",
-    "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "@typescript-eslint/parser": "^4.23.0",
+    "@gapizza/eslint-config": "^1.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
     "eslint-import-resolver-typescript": "^2.4.0"
   },
   "repository": {
