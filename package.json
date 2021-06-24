@@ -1,7 +1,7 @@
 {
   "name": "@gapizza/eslint-config-ts",
   "description": "Eslint Config for Typescript projects",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "author": "Eric Hacke",
   "bugs": {
     "url": "https://github.com/gapizza/eslint-config-ts/issues"
