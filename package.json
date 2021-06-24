@@ -46,7 +46,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^2.0.0",
+    "@gapizza/eslint-config": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "eslint-import-resolver-typescript": "^2.4.0"
