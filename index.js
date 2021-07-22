@@ -20,7 +20,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/no-unused-vars': ['error', { args: 'after-used', ignoreRestSiblings: true, vars: 'all' }],
-    '@typescript-eslint/no-use-before-define': ['error', { classes: true, enums: true, functions: true, typedefs: true, variables: true }],
+    '@typescript-eslint/no-use-before-define': ['error'],
     'no-shadow': 'off',
     'no-unused-vars': 'off',
     'no-use-before-define': 'off',
