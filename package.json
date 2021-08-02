@@ -12,21 +12,22 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@gapizza/commitlint-config": "^1.0.1",
+    "@gapizza/eslint-config": "^2.1.2-beta.3e9f4c6.0",
     "@gapizza/prettier-config": "^1.0.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@types/bluebird": "^3.5.35",
-    "@types/node": "^15.12.4",
+    "@types/bluebird": "^3.5.36",
+    "@types/node": "^16.4.10",
     "commitizen": "^4.2.4",
-    "commitlint": "^12.1.4",
+    "commitlint": "^13.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.29.0",
+    "eslint": "^7.32.0",
     "fixpack": "^4.0.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.3.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "prettier": "^2.3.2",
     "prettier-eslint-cli": "^5.0.1"
   },
   "engineStrict": true,
@@ -44,11 +45,20 @@
     "typescript"
   ],
   "license": "MIT",
+  "lint-staged": {
+    "./package.json": [
+      "fixpack"
+    ],
+    "*.{js,ts}": [
+      "prettier-eslint --write",
+      "eslint --fix"
+    ]
+  },
   "main": "index.js",
   "peerDependencies": {
     "@gapizza/eslint-config": "^2.1.1",
-    "@typescript-eslint/eslint-plugin": "^4.28.0",
-    "@typescript-eslint/parser": "^4.28.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
     "eslint-import-resolver-typescript": "^2.4.0"
   },
   "repository": {
@@ -56,15 +66,18 @@
     "url": "git+https://github.com/gapizza/eslint-config-ts.git"
   },
   "scripts": {
-    "beta": "npm version prerelease && npm publish --tag beta",
+    "beta": "npm run update:packageVersion && ./scripts/publish-beta.sh",
     "commit": "git-cz",
     "lint": "fixpack && prettier-eslint --write && eslint --fix \"**/*.{js,ts}\"",
-    "major": "npm version major && npm publish",
-    "minor": "npm version minor && npm publish",
-    "patch": "npm version patch && npm publish",
-    "postpublish": "git push",
+    "lint:ci": "eslint \"**/*.{js,ts}\"",
+    "lint:pjson": "npmPkgJsonLint .",
+    "major": "npm run update:packageVersion && npm version --git-tag-version false major && npm publish && npm run tag",
+    "minor": "npm run update:packageVersion && npm version --git-tag-version false minor && npm publish && npm run tag",
+    "patch": "npm run update:packageVersion && npm version --git-tag-version false patch && npm publish && npm run tag",
     "prepare": "fixpack && husky install",
     "preversion": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tag": "git stash && git tag v\"$(npm view @gapizza/eslint-config-ts version)\" && git push origin --tags",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update:packageVersion": "cat package.json | jq \".version = \\\"$(npm view @gapizza/eslint-config-ts version)\\\"\" > package.json"
   }
 }
