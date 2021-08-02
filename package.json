@@ -15,7 +15,7 @@
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@gapizza/commitlint-config": "^1.0.1",
-    "@gapizza/eslint-config": "^2.1.2-beta.ab719b9.0",
+    "@gapizza/eslint-config": "^2.2.0",
     "@gapizza/prettier-config": "^1.0.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/bluebird": "^3.5.36",
