@@ -56,7 +56,7 @@
   },
   "main": "index.cjs",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^2.2.2-beta.c50ba65.0",
+    "@gapizza/eslint-config": "2.2.2-beta.575d3f1.0",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "eslint-import-resolver-typescript": "^2.5.0"
