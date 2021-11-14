@@ -15,7 +15,6 @@
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "@gapizza/commitlint-config": "^1.0.3-beta.25f39a2.0",
-    "@gapizza/eslint-config": "^2.2.2-beta.c50ba65.0",
     "@gapizza/prettier-config": "^1.0.3-beta.2ca6c33.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/bluebird": "^3.5.36",
@@ -57,7 +56,7 @@
   },
   "main": "index.cjs",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^2.2.1",
+    "@gapizza/eslint-config": "^2.2.2-beta.c50ba65.0",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "eslint-import-resolver-typescript": "^2.5.0"
