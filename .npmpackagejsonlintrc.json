@@ -37,13 +37,17 @@
     "no-restricted-pre-release-dependencies": [
       "error",
       [
-        "@gapizza/eslint-config"
+        "@gapizza/eslint-config",
+        "@gapizza/prettier-config",
+        "@gapizza/commitlint-config"
       ]
     ],
     "no-restricted-pre-release-devDependencies": [
       "error",
       [
-        "@gapizza/eslint-config"
+        "@gapizza/eslint-config",
+        "@gapizza/prettier-config",
+        "@gapizza/commitlint-config"
       ]
     ],
     "name-format": "error",

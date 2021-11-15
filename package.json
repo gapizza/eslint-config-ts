@@ -12,23 +12,22 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@gapizza/commitlint-config": "^1.0.2",
-    "@gapizza/eslint-config": "^2.2.1",
-    "@gapizza/prettier-config": "^1.0.2",
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@gapizza/commitlint-config": "^2.0.0",
+    "@gapizza/prettier-config": "^2.0.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/bluebird": "^3.5.36",
-    "@types/node": "^16.7.5",
+    "@types/node": "^16.11.7",
     "commitizen": "^4.2.4",
-    "commitlint": "^13.1.0",
+    "commitlint": "^14.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.2.0",
     "fixpack": "^4.0.0",
-    "husky": "^7.0.2",
-    "lint-staged": "^11.1.2",
-    "npm-package-json-lint": "^5.2.3",
-    "prettier": "^2.3.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.0.2",
+    "npm-package-json-lint": "^5.4.2",
+    "prettier": "^2.4.1",
     "prettier-eslint-cli": "^5.0.1"
   },
   "engineStrict": true,
@@ -36,7 +35,7 @@
     "npm": ">=7.0.0"
   },
   "files": [
-    "*.js",
+    "*.cjs",
     "!scratch.*"
   ],
   "homepage": "https://github.com/gapizza/eslint-config-ts#readme",
@@ -50,17 +49,17 @@
     "./package.json": [
       "fixpack"
     ],
-    "*.{js,ts}": [
+    "*.{js,cjs,ts}": [
       "prettier-eslint --write",
       "eslint --fix"
     ]
   },
-  "main": "index.js",
+  "main": "index.cjs",
   "peerDependencies": {
-    "@gapizza/eslint-config": "^2.2.1",
-    "@typescript-eslint/eslint-plugin": "^4.29.3",
-    "@typescript-eslint/parser": "^4.29.3",
-    "eslint-import-resolver-typescript": "^2.4.0"
+    "@gapizza/eslint-config": "3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint-import-resolver-typescript": "^2.5.0"
   },
   "repository": {
     "type": "git",
@@ -69,8 +68,8 @@
   "scripts": {
     "beta": "npm run update:packageVersion && ./scripts/publish-beta.sh",
     "commit": "git-cz",
-    "lint": "fixpack && prettier-eslint --write && eslint --fix \"**/*.{js,ts}\"",
-    "lint:ci": "eslint \"**/*.{js,ts}\"",
+    "lint": "fixpack && prettier-eslint --write && eslint --fix \"**/*.{js,cjs,ts}\"",
+    "lint:ci": "eslint \"**/*.{js,cjs,ts}\"",
     "lint:pjson": "npmPkgJsonLint .",
     "major": "npm run update:packageVersion && npm version --git-tag-version false major && npm publish && npm run tag",
     "minor": "npm run update:packageVersion && npm version --git-tag-version false minor && npm publish && npm run tag",
@@ -80,5 +79,6 @@
     "tag": "git stash && git tag v\"$(npm view @gapizza/eslint-config-ts version)\" && git push origin --tags",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:packageVersion": "cat package.json | jq \".version = \\\"$(npm view @gapizza/eslint-config-ts version)\\\"\" > package.json"
-  }
+  },
+  "type": "module"
 }
